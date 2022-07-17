@@ -30,7 +30,19 @@ class StartScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const Text('Start Screen'),
+      body: Column(
+        children: [
+          const Text('Choose a menu to navigate'),
+          ElevatedButton(
+            onPressed: () => showSnackBar(context: context, message: 'Button 1'),
+            child: const Text('Button 1'),
+          ),
+           ElevatedButton(
+            onPressed: () => showSnackBar(context: context, message: 'Button 2'),
+            child: const Text('Button 2'),
+          ),
+        ],
+      ),
     );
   }
 }
