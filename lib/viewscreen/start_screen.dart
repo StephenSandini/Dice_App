@@ -1,3 +1,4 @@
+import 'package:dice_template_app/viewscreen/businesscard_screen.dart';
 import 'package:dice_template_app/viewscreen/imagedemo_screen.dart';
 import 'package:dice_template_app/viewscreen/materialdesign_screen.dart';
 import 'package:dice_template_app/viewscreen/view/view_util.dart';
@@ -36,7 +37,7 @@ class StartScreen extends StatelessWidget {
             },
             itemBuilder: (BuildContext context) {
               return <PopupMenuItem<String>>[
-                 PopupMenuItem(
+                PopupMenuItem(
                   value: 'License',
                   child: Row(
                     children: const [
@@ -45,7 +46,7 @@ class StartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                 PopupMenuItem(
+                PopupMenuItem(
                   value: 'Balance',
                   child: Row(
                     children: const [
@@ -54,7 +55,7 @@ class StartScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-                 PopupMenuItem(
+                PopupMenuItem(
                   value: 'Profile',
                   child: Row(
                     children: const [
@@ -111,12 +112,18 @@ class StartScreen extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            onPressed: () => Navigator.pushNamed(context, ImageDemoScreen.routeName),
+            onPressed: () =>
+                Navigator.pushNamed(context, ImageDemoScreen.routeName),
             child: Text(
               'Image Demo',
               style: Theme.of(context).textTheme.button,
             ),
           ),
+          ElevatedButton(
+            onPressed: () =>
+                Navigator.pushNamed(context, BusinessCardScreen.routeName),
+            child: const Text('My Mobile Business Card'),
+          )
         ],
       ),
       floatingActionButton: FloatingActionButton(

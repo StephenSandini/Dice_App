@@ -1,3 +1,4 @@
+import 'package:dice_template_app/viewscreen/businesscard_screen.dart';
 import 'package:dice_template_app/viewscreen/imagedemo_screen.dart';
 import 'package:dice_template_app/viewscreen/materialdesign_screen.dart';
 import 'package:dice_template_app/viewscreen/start_screen.dart';
@@ -19,6 +20,7 @@ class Dice_App extends StatelessWidget {
       //Displays or Removes the Debug Banner
       debugShowCheckedModeBanner: Constant.devMode,
       theme: ThemeData(
+        fontFamily: 'Orbitron',
         //Changes between dark and light mode
         brightness: Brightness.dark,
         //Overrides text theme, in this case we are doing headline 1
@@ -39,6 +41,7 @@ class Dice_App extends StatelessWidget {
         MaterialDesignClass.routeName: (BuildContext context) =>
             const MaterialDesignClass(),
         ImageDemoScreen.routeName: (BuildContext context) => const ImageDemoScreen(),
+        BusinessCardScreen.routeName:(BuildContext context) => const BusinessCardScreen(),
       },
     );
   }
