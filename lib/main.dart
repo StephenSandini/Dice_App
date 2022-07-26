@@ -38,10 +38,6 @@ class Dice_App extends StatelessWidget {
       //Screen.name of route : function
       routes: {
         StartScreen.routeName: (BuildContext context) => const StartScreen(),
-        MaterialDesignClass.routeName: (BuildContext context) =>
-            const MaterialDesignClass(),
-        ImageDemoScreen.routeName: (BuildContext context) => const ImageDemoScreen(),
-        BusinessCardScreen.routeName:(BuildContext context) => const BusinessCardScreen(),
       },
     );
   }
